@@ -42,17 +42,17 @@ const deleteSong = async (id) => {
     }
 }
 
-const updateSong = async (song, id) => {
-    const {name, artist, album, time, is_favorite} = song;
+const updateSong = async (id, song) => {
+    // const {name, artist, album, time, is_favorite} = song;
     try {
-        const updatedSong = await db.one("UPDATE song SET name = $1, artist = $2, album = $3, time = $4, is_favorite = $5 WHERE id = $5 RETURNING *"
-        [name, artist, album, time, is_favorite, id]);
+        const updatedSong = await db.one("UPDATE songs SET name = $1, artist = $2, album = $3, time = $4, is_favorite = $5 WHERE id = $6 RETURNING *",
+        [song.name, song.artist, song.album, song.time, song.is_favorite, id]);
         return updatedSong;
 
     } catch (error) {
         return error;
     }
-}
+};
 
 
 
