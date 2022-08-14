@@ -7,6 +7,7 @@ const Navbar = () => {
         <h1>
             <Link to="/">AddyMusic</Link>
             <Link to="/songs">Songs</Link>
+            <Link to="/songs/new">New Song</Link>
         </h1>
     </nav>
   )

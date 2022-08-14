@@ -14,7 +14,7 @@ const Songs = () => {
       .catch((c) => console.warn("catch", c));
   }, []);
   return (
-    <div className="song-index">
+    <div className="Song">
       <section>
         <table>
           <thead>

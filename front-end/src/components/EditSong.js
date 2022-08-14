@@ -50,6 +50,7 @@ const EditSong = () => {
 
   return (
     <div className="New">
+      {/* <h2>New</h2> */}
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Song Name:</label>
         <input
